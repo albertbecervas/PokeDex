@@ -1,7 +1,9 @@
 package com.omitsis.pokedex.mvp.view
 
-interface PokemonListView {
+import com.omitsis.pokedex.model.Pokemon
 
-    fun showPokemonList()
+interface PokemonListView : BaseView {
+
+    fun showPokemonList(pokemonList: List<Pokemon>)
 
 }
