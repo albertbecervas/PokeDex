@@ -1,7 +1,9 @@
 package com.omitsis.pokedex.mvp.interactor
 
-/**
- * Created by Albert on 29/08/2017.
- */
-interface PokemonListInteractor {
+import com.omitsis.pokedex.mvp.listener.PokemonListListener
+
+interface PokemonListInteractor: BaseInteractor {
+
+    fun loadPokemonList(pokemonListListener: PokemonListListener)
+
 }

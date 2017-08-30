@@ -3,6 +3,7 @@ package com.omitsis.pokedex
 import android.app.Application
 import com.omitsis.pokedex.dagger.setup.components.AppComponent
 import com.omitsis.pokedex.dagger.setup.components.DaggerAppComponent
+import timber.log.Timber
 
 
 class App : Application() {
@@ -14,8 +15,9 @@ class App : Application() {
 
     override fun onCreate() {
         super.onCreate()
+        Timber.plant(Timber.DebugTree())
         instance = this
-        appComponent = DaggerAppComponent.builder().build()
+        appComponent = DaggerAppComponent.create()
     }
 
 }
